@@ -1,24 +1,21 @@
 # Preserve Bottom Navigation Tabbar State
 
-Bottom tab pages rebuild when we switch between them. This project shows various techniques of how to preserbe them.  
-Here's the article related to this project.
+Bottom tab pages initalizes every time we switch between them. We usually just want to initialize once. This project shows various techniques of how to preserve them.  
 
-</br>
+### Here's the [article](https://nikkigoel.com/state-persistence-techniques-for-the-flutter-bottom-navigation-bar) related to this project.
+
+## Demo
+
+<center><img src="snapshots/demo_03.gif" alt="Preserve state demo"/> </center>
 
 ## How to run the project
 
 ### - Run on [dartpad](https://dartpad.dev/)
 
-</br>
-
 ### - Run locally on your device
-
-</br>
 
 #### Requirements:
 - Flutter should installed in your device.
-
-</br>
 
 #### Steps to run:
 
