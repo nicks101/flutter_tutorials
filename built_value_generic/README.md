@@ -1,15 +1,13 @@
-# Custom Serealization with `built_value` in Dart and Flutter
+# Custom Serializer for collection with generic type in `built_value` in Dart and Flutter
 
 Deserializing a model class with a collection generic type like `BuiltList` is not easy with `built_value`.
 Here we'll see how to achieve it.
 
 
-### Here's the [article](https://blog.nikkigoel.com/custom-serialization-with-builtvalue-in-dart-and-flutter) related to this project.
+### Here's the [article](https://blog.nikkigoel.com/custom-serializer-with-builtvalue-in-dart-and-flutter) related to this project.
 
 
 ## How to run the project
-
-### - Run on [dartpad](https://dartpad.dev/)
 
 ### - Run locally on your device
 
