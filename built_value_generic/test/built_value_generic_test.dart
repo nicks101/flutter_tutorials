@@ -5,7 +5,7 @@ import 'package:test/test.dart';
 
 void main() {
 
-  group('GenericModel<MyModel', () {
+  group('GenericModel<MyModel>', () {
     final GenericModel<MyModel> model = GenericModel<MyModel>(
           (b) => b
         ..data = ListBuilder<MyModel>([
