@@ -26,4 +26,17 @@ void main() {
     });
   });
 
+  group('GenericModel<String>', () {
+    final GenericModel<String> model = GenericModel<String>(
+          (b) => b..data = ListBuilder<String>(['Hello', 'World']),
+    );
+
+    test('deserializes serialized model', () async {
+      expect(
+        GenericModel.fromJson<String>(model.toJson()),
+        model,
+      );
+    });
+  });
+
 }
