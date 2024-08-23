@@ -15,8 +15,10 @@ abstract class GenericModel<T>
 
   Map<String, dynamic> toJson() {
     /// Add the typecast [Map<String, dynamic>] to fix the error
-    return serializers.serializeWith(GenericModel.serializer, this)
-        as Map<String, dynamic>;
+    return GenericBuilderFactory.getSerializer<T>().serialize(
+      this,
+      specifiedType: FullType(GenericModel, [FullType(T)]),
+    ) as Map<String, dynamic>;
   }
 
   static GenericModel<T> fromJson<T>(Map<String, dynamic> json) {
