@@ -4,10 +4,9 @@ import 'package:built_value_generic/models/my_model.dart';
 import 'package:test/test.dart';
 
 void main() {
-
   group('GenericModel<MyModel>', () {
     final GenericModel<MyModel> model = GenericModel<MyModel>(
-          (b) => b
+      (b) => b
         ..data = ListBuilder<MyModel>([
           MyModel((b) => b
             ..name = 'Hello'
@@ -24,11 +23,23 @@ void main() {
         model,
       );
     });
+
+    test('json format', () async {
+      expect(
+        model.toJson(),
+        {
+          'data': [
+            {'name': 'Hello', 'id': '1'},
+            {'name': 'World', 'id': '2'},
+          ],
+        },
+      );
+    });
   });
 
   group('GenericModel<String>', () {
     final GenericModel<String> model = GenericModel<String>(
-          (b) => b..data = ListBuilder<String>(['Hello', 'World']),
+      (b) => b..data = ListBuilder<String>(['Hello', 'World']),
     );
 
     test('deserializes serialized model', () async {
@@ -37,6 +48,14 @@ void main() {
         model,
       );
     });
-  });
 
+    test('json format', () async {
+      expect(
+        model.toJson(),
+        {
+          'data': ['Hello', 'World'],
+        },
+      );
+    });
+  });
 }
